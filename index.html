@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PI - BARRETO GUARNIZO</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eef5fb;
+      color: #17202a;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0b2f5b;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 5px solid #f4c542;
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-box img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      background: white;
+      padding: 6px;
+      border-radius: 8px;
+    }
+
+    .logo-box h1 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 12px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      color: #f4c542;
+    }
+
+    main {
+      width: 86%;
+      max-width: 1100px;
+      margin: 30px auto;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 25px;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      border-left: 8px solid #0b5fa5;
+    }
+
+    h2 {
+      color: #0b2f5b;
+      margin-top: 0;
+      border-bottom: 2px solid #d9e7f5;
+      padding-bottom: 8px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #ffffff, #dceeff);
+      text-align: center;
+      border-left: 8px solid #f4c542;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      border: none;
+    }
+
+    .question {
+      background: #f7fbff;
+      border: 2px dashed #0b5fa5;
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #f7fbff;
+      border: 1px solid #c7daee;
+      padding: 18px;
+      border-radius: 12px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #0b5fa5;
+    }
+
+    .science-image {
+      margin-top: 25px;
+      text-align: center;
+      background: #eef6ff;
+      padding: 20px;
+      border-radius: 14px;
+    }
+
+    svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: #0b2f5b;
+      color: white;
+      padding: 12px;
+    }
+
+    td {
+      border: 1px solid #c7daee;
+      padding: 12px;
+      vertical-align: top;
+    }
+
+    td a {
+      color: #0b5fa5;
+      font-weight: bold;
+    }
+
+    .keyword {
+      background: #fff7d6;
+      border-left: 6px solid #f4c542;
+      padding: 16px;
+      border-radius: 10px;
+      font-size: 1.05rem;
+    }
+
+    button {
+      background: #0b5fa5;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 12px;
+    }
+
+    button:hover {
+      background: #073f70;
+    }
+
+    #extra-info {
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      background: #eaf4ff;
+      border-radius: 10px;
+    }
+
+    .reflection {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    footer {
+      text-align: center;
+      background: #0b2f5b;
+      color: white;
+      padding: 20px;
+      margin-top: 35px;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
+
+      .grid,
+      .reflection {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo-box">
+      <img src="logo-unein.png" alt="Logo de la institución">
+      <h1>PI - BARRETO GUARNIZO</h1>
+    </div>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#conexion">Física + Química</a>
+      <a href="#fuentes">Fuentes</a>
+      <a href="#concepto">Concepto</a>
+      <a href="#reflexion">Reflexión</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="hero">
+      <h2>Influencia de las sales metálicas en la emisión espectral de los fuegos artificiales</h2>
+
+      <p>
+        Esta página web explica cómo las sales metálicas generan los colores de los fuegos artificiales y la ciencia que hace posible este fenómeno.
+    
+      </p>
+
+      <div class="question">
+        <strong>Pregunta guía:</strong>
+        ¿Cómo influyen las sales metálicas en la emisión espectral de colores durante una explosión pirotécnica?
+      </div>
+    </section>
+
+    <section id="conexion">
+      <h2>Conexión entre Física y Química</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Idea de Física</h3>
+          <p>
+            Los electrones excitados regresan a niveles energéticos inferiores
+
+liberando fotones con longitudes de onda específicas, lo que produce
+
+los diferentes colores observados en los fuegos artificiales.
+            
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Idea de Química</h3>
+          <p>
+            Las sales metálicas poseen configuraciones electrónicas particulares
+que, al ser sometidas a altas temperaturas, provocan la excitación de
+sus electrones y la posterior emisión de colores característicos.
+        
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Conexión entre ambas materias</h3>
+          <p>
+            La química explica la composición y el comportamiento de las sales
+
+metálicas durante la combustión, mientras que la física describe la
+
+emisión de radiación electromagnética y la relación entre la energía
+
+de los fotones y los colores visibles.
+          
+          </p>
+        </div>
+      </div>
+
+      <div class="science-image">
+        <h3>Imagen explicativa del fenómeno</h3>
+        <img src="proceso.png" alt="Proceso Físico y Químico" width="600" height="400">
+        
+      </div>
+    </section>
+
+    <section id="fuentes">
+      <h2>Fuentes consultadas</h2>
+
+      <p>
+        Las fuentes deben ser académicas, educativas o institucionales.
+        No se debe escribir únicamente “Google” o “internet”.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tema</th>
+            <th>Autor o institución</th>
+            <th>Fecha</th>
+            <th>Link académico</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Espectros atómicos</td>
+            <td>LibreTexts Chemistry / Kris Quinlan</td>
+            <td>29 de enero de 2023</td>
+            <td>
+              <a href="https://chem.libretexts.org/Courses/University_of_Toronto/Chemistry%3A_Physical_Principles/02%3A_Quantum_Theory_and_Electronic_Structure/2.03%3A_Atomic_Spectra?utm_source">
+                Ver fuente
+              </a>
+            </td>
+          </tr>
+
+          
+
+          
+        </tbody>
+      </table>
+    </section>
+
+    <section id="concepto">
+      <h2>Palabra científica obligatoria</h2>
+
+      <div class="keyword">
+        <strong>Radiación electromagnética:</strong>
+        energía que se emite en forma de ondas o fotones cuando los electrones de un átomo regresan a un nivel de energía menor, produciendo colores característicos.
+      
+      </div>
+
+      <button onclick="mostrarExplicacion()">Mostrar explicación sencilla</button>
+
+      <div id="extra-info">
+        <p>
+          La radiación electromagnética es la luz que emiten los átomos cuando se calientan. En los fuegos artificiales, cada sal metálica produce un color distinto, como el rojo, el verde o el azul.
+          
+          
+        </p>
+      </div>
+    </section>
+
+    <section id="reflexion">
+      <h2>Decisión personal y dificultad presentada</h2>
+
+      <div class="reflection">
+        <div class="card">
+          <h3>Decisión personal tomada</h3>
+          <p>
+            Elegí este proyecto porque quería investigar la ciencia detrás de los
+
+fuegos artificiales. Me interesa ver cómo los diferentes metales
+
+cambian el color de las explosiones cuando sus átomos se activan con
+
+el calor.
+            
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Dificultad o duda surgida</h3>
+          <p>
+            Me preguntaba si ¿el metal se gasta o se destruye tras emitir el color, o puede repetir 
+
+
+
+el proceso varias veces durante la explosión?
+            
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Proyecto Interdisciplinario de Programación, Física y Química | 2do BGU</p>
+  </footer>
+
+  <script>
+    function mostrarExplicacion() {
+      const caja = document.getElementById("extra-info");
+
+      if (caja.style.display === "block") {
+        caja.style.display = "none";
+      } else {
+        caja.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
